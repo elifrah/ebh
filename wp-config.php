@@ -15,22 +15,24 @@
  * @package WordPress
  */
 
-$host = $_SERVER["HTTP_HOST"];
-$isDev = isset($_GET['dev']);
-echo $_SERVER["SERVER_NAME"];
+$hostName = $_SERVER['SERVER_NAME'];
+$useDevDB = isset($_GET['dev']);
+$DBHost = 'localhost';
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'corefit1_wor3');
-
-/** MySQL database username */
-define('DB_USER', 'corefit1_226');
-
-/** MySQL database password */
-define('DB_PASSWORD', '5sb6U1K0');
-
-/** MySQL hostname */
-define('DB_HOST', '69.89.31.177');
+//if developing locally and the dev query is has been set then use the local DB
+if (($hostName == 'localhost') && ($useDevDB)) {
+	define('DB_NAME', 'wordpress');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', 'root');
+}
+//otherwise we'll use the remote server calling it by ip when developing locally
+else {
+	define('DB_NAME', 'corefit1_wor3');
+	define('DB_USER', 'corefit1_226');
+	define('DB_PASSWORD', '5sb6U1K0');
+	if ($hostName == 'localhost') $DBHost = '69.89.31.177';
+}
+define('DB_HOST', $DBHost);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
