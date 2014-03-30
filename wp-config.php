@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The base configurations of the WordPress.
  *
@@ -15,38 +14,28 @@
  * @package WordPress
  */
 
-// $hostName = $_SERVER['HTTP_HOST'];
-// $useDevDB = isset($_GET['dev']);
-// $DBHost = 'localhost';
+$hostName = $_SERVER['HTTP_HOST'];
+$useDevDB = isset($_GET['dev']);
+$DBHost = 'localhost';
 
-// echo $hostName;
-// //if developing locally and the dev query is has been set then use the local DB
-// if (($hostName == 'localhost:8888') && ($useDevDB)) {
-// 	define('DB_NAME', 'wordpress');
-// 	define('DB_USER', 'root');
-// 	define('DB_PASSWORD', 'root');
-// }
-// //otherwise we'll use the remote server calling it by ip when developing locally
-// else {
-// 	define('DB_NAME', 'corefit1_wor3');
-// 	define('DB_USER', 'corefit1_226');
-// 	define('DB_PASSWORD', '5sb6U1K0');
-// 	if ($hostName == 'localhost:8888') $DBHost = '69.89.31.177';
-// }
-// define('DB_HOST', $DBHost);
-
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'corefit1_wor3');
-
-/** MySQL database username */
-define('DB_USER', 'corefit1_226');
-
-/** MySQL database password */
-define('DB_PASSWORD', '5sb6U1K0');
+if (($hostName == 'localhost') && $useDevDB) {
+		define('DB_NAME', 'wordpress');
+		define('DB_USER', 'root');
+		define('DB_PASSWORD', 'root');
+}
+else {
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'corefit1_wor3');
+	/** MySQL database username */
+	define('DB_USER', 'corefit1_226');
+	/** MySQL database password */
+	define('DB_PASSWORD', '5sb6U1K0');
+	if ($hostName == 'localhost:888') { $DBHost = '69.89.31.177'; }
+}
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $DBHost);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -63,14 +52,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY', 'dAnH=(ym)AW[U$Y%W&>wUSCeu}}P{SFdd-Q[TF|OFIdPreNYu/k}+X/q|T&{Rp-y=P*g{dOP/uJCsT$dx+SKzBROPdn)E?!h;LAMLPBDPJ_/)LbeXX}]&i+uqnBX)e_%');
+define('SECURE_AUTH_KEY', '|ug)e-TRu<@jwF}F{%c!o@fT-aVAjlUVVYG!^d-S!r-x*H|c>Fv@r<VK=L/k<nZkuJJu?lsj}A[s]VID&TwVhND<lcfqS;$GYGc)azgsC&MuPdZjQYZ>$DzugrrVEV))');
+define('LOGGED_IN_KEY', 'h)%?ftX<b+[KF}RwNE)oMWTVuyoBWCYY+vuq;BNOj/!tO<_zoN([|-Ey%JT>*Z;<op@lwD!@%Aj?ssZ$)BkP=v[]BQ)sS=NYrB<h_*fr-szpn^]DAq/x}iR/DX;<<Itl');
+define('NONCE_KEY', 'k)/?MC=uFYp/lVIarC^J>YyvaJIO[xN&E}crNj)}ytn*HKX$=!MlXe*xtGYR;Bi_a}F&O)?W[]CG>lDaOR+ax?_@Bq_cTjQ[(%|Nud!Y=BWGsi^{q+r}blaDEIohhU/R');
+define('AUTH_SALT', 'd<%pkrfR!(l[*P[?N<cCyS%dx@UgeDq[}z%zalMQ>H(PvWn!Kr(v>u?ALjm+nmlM|a(FJ@M+r!zlvN|oov/gbIVx&*(y+?bn[OwHEHyv!zXB/Tl!XYTBifS>n(Rv<%ov');
+define('SECURE_AUTH_SALT', '|^fncPRc)ds;cH>X;-wRDjSxEkk{CJhES/mHB<q+Ul!aQ/GQArg%Z=D@n+Y+bsmKXSZHHM)WpwxSIQGf]ALeYr&=wsLX@N&yh+P>vnobmmC-fA]t?=MD_k!pcmH(<@sB');
+define('LOGGED_IN_SALT', 'xdguzdGf%s&gIDd/Y!<Jrc[$odVSG_OH*Tye}jv[k=dHv>znbN?xdHG/v(<H@(d&?@>t[CiWko+l@Sm&wR*$drq}*blL]yZYvAtzvHDG$C?aZ_LgPhQn;;)_-AeeFiNz');
+define('NONCE_SALT', 'hkbfJN<cM-w-%[-NZP(DQJ;F^[b/(VtUmUzDoc(^UqvPNl[<CoeQYs$RhW[VXUpgIy<;o>IMW)f&Vsl?L^saz/rUujUZU%/QFGSZhhi=?mzhU*lE|+eltMg*FEI<_/X=');
 
 /**#@-*/
 
@@ -80,7 +69,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_buit_';
 
 /**
  * WordPress Localized Language, defaults to English.
