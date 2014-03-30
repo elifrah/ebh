@@ -19,6 +19,7 @@ $hostName = $_SERVER['HTTP_HOST'];
 $useDevDB = isset($_GET['dev']);
 $DBHost = 'localhost';
 
+echo $hostName;
 //if developing locally and the dev query is has been set then use the local DB
 if (($hostName == 'localhost:8888') && ($useDevDB)) {
 	define('DB_NAME', 'wordpress');
