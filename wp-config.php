@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The base configurations of the WordPress.
  *
@@ -14,18 +15,33 @@
  * @package WordPress
  */
 
+echo $_SERVER["HTTP_HOST"];
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+define('DB_NAME', 'corefit1_wor3');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'corefit1_226');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '5sb6U1K0');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '69.89.31.177');
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+// define('DB_NAME', 'wordpress');
+
+/** MySQL database username */
+// define('DB_USER', 'root');
+
+/** MySQL database password */
+// define('DB_PASSWORD', 'root');
+
+/** MySQL hostname */
+// define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
