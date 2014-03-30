@@ -1,0 +1,15 @@
+*** WooCommerce Product Documents Changelog ***
+
+2014.02.24 - version 1.1.1
+ * Fix - WooCommerce 2.1 Compatibility fix
+
+2014.01.20 - version 1.1
+ * Misc - WooCommerce 2.1 Compatibility
+ * Misc - Uses SkyVerge Plugin Framework
+ * Localization - Text domain changed from `wc-product-documents` to `woocommerce-product-documents`
+
+2013.12.13 - version 1.0.1
+ * Tweak - Added wc_product_documents_link_target filter to control how document links are opened
+
+2013.08.21 - version 1.0
+ * Initial Release
