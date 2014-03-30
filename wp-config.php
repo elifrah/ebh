@@ -15,7 +15,9 @@
  * @package WordPress
  */
 
-echo $_SERVER["HTTP_HOST"];
+$host = $_SERVER["HTTP_HOST"];
+$isDev = isset($_GET['dev']);
+echo $_SERVER["SERVER_NAME"];
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
