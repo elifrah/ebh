@@ -37,13 +37,13 @@ echo $hostName;
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+define('DB_NAME', 'corefit1_wor3');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'corefit1_226');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '5sb6U1K0');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
