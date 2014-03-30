@@ -20,33 +20,33 @@ $useDevDB = isset($_GET['dev']);
 $DBHost = 'localhost';
 
 echo $hostName;
-//if developing locally and the dev query is has been set then use the local DB
-if (($hostName == 'localhost:8888') && ($useDevDB)) {
-	define('DB_NAME', 'wordpress');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'root');
-}
-//otherwise we'll use the remote server calling it by ip when developing locally
-else {
-	define('DB_NAME', 'corefit1_wor3');
-	define('DB_USER', 'corefit1_226');
-	define('DB_PASSWORD', '5sb6U1K0');
-	if ($hostName == 'localhost:8888') $DBHost = '69.89.31.177';
-}
-define('DB_HOST', $DBHost);
+// //if developing locally and the dev query is has been set then use the local DB
+// if (($hostName == 'localhost:8888') && ($useDevDB)) {
+// 	define('DB_NAME', 'wordpress');
+// 	define('DB_USER', 'root');
+// 	define('DB_PASSWORD', 'root');
+// }
+// //otherwise we'll use the remote server calling it by ip when developing locally
+// else {
+// 	define('DB_NAME', 'corefit1_wor3');
+// 	define('DB_USER', 'corefit1_226');
+// 	define('DB_PASSWORD', '5sb6U1K0');
+// 	if ($hostName == 'localhost:8888') $DBHost = '69.89.31.177';
+// }
+// define('DB_HOST', $DBHost);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-// define('DB_NAME', 'wordpress');
+define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
-// define('DB_USER', 'root');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-// define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-// define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
