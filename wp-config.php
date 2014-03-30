@@ -15,12 +15,12 @@
  * @package WordPress
  */
 
-$hostName = $_SERVER['SERVER_NAME'];
+$hostName = $_SERVER['HTTP_HOST'];
 $useDevDB = isset($_GET['dev']);
 $DBHost = 'localhost';
 
 //if developing locally and the dev query is has been set then use the local DB
-if (($hostName == 'localhost') && ($useDevDB)) {
+if (($hostName == 'localhost:8888') && ($useDevDB)) {
 	define('DB_NAME', 'wordpress');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', 'root');
@@ -30,7 +30,7 @@ else {
 	define('DB_NAME', 'corefit1_wor3');
 	define('DB_USER', 'corefit1_226');
 	define('DB_PASSWORD', '5sb6U1K0');
-	if ($hostName == 'localhost') $DBHost = '69.89.31.177';
+	if ($hostName == 'localhost:8888') $DBHost = '69.89.31.177';
 }
 define('DB_HOST', $DBHost);
 
