@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The base configurations of the WordPress.
  *
@@ -14,53 +13,23 @@
  *
  * @package WordPress
  */
-
-if ($_SERVER["HTTP_HOST"] === 'www.electricbikehub.co.nz') {
-	// ** MySQL settings - You can get this info from your web host ** //
-	/** The name of the database for WordPress */
+echo $_SERVER["HTTP_HOST"];
+if ($_SERVER["HTTP_HOST"] == 'www.electricbikehub.co.nz') {
 	define('DB_NAME', 'corefit1_wor3');
-
-	/** MySQL database username */
 	define('DB_USER', 'corefit1_226');
-
-	/** MySQL database password */
 	define('DB_PASSWORD', '5sb6U1K0');
-
-	/** MySQL hostname */
 	define('DB_HOST', 'localhost');
 }
-else {
-	// ** MySQL settings - You can get this info from your web host ** //
-	/** The name of the database for WordPress */
+else (isset($_GET['dev'])){
+	echo 'got here';
 	define('DB_NAME', 'wordpress');
-
-	/** MySQL database username */
 	define('DB_USER', 'root');
-
-	/** MySQL database password */
 	define('DB_PASSWORD', 'root');
-
-	/** MySQL hostname */
 	define('DB_HOST', 'localhost');
-
-	/** Database Charset to use in creating database tables. */
-	define('DB_CHARSET', 'utf8');
-	
 }
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-// define('DB_NAME', 'corefit1_wor3');
-
-/** MySQL database username */
-// define('DB_USER', 'corefit1_226');
-
-/** MySQL database password */
-// define('DB_PASSWORD', '5sb6U1K0');
-
-/** MySQL hostname */
-// define('DB_HOST', '69.89.31.177');
-
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -91,7 +60,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
  * WordPress Localized Language, defaults to English.
