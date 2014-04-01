@@ -13,15 +13,27 @@
  *
  * @package WordPress
  */
-echo $_SERVER["HTTP_HOST"];
+
+echo '<pre>';
+print_r($_SERVER);
+echo '</pre>';
+
 if ($_SERVER["HTTP_HOST"] == 'www.electricbikehub.co.nz') {
-	define('DB_NAME', 'corefit1_wor3');
-	define('DB_USER', 'corefit1_226');
-	define('DB_PASSWORD', '5sb6U1K0');
+	//***doing it this was invalidates the setting in wp-admin menus but allows it to run
+	//on either local or remote without updating the database
+	define('WP_HOME','http://electricbikehub.co.nz');
+	define('WP_SITEURL','http://electricbikehub.co.nz');
+
+	define('DB_NAME', 'corefit1_ebhnew');
+	define('DB_USER', 'corefit1_ebhnew');
+	define('DB_PASSWORD', 'F!=sFXe=F[}H');
+	//the remote hostname: box377.bluehost.com *not tested*
 	define('DB_HOST', 'localhost');
 }
-else (isset($_GET['dev'])){
-	echo 'got here';
+else {
+	define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
+	define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
+
 	define('DB_NAME', 'wordpress');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', 'root');
