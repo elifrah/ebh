@@ -18,7 +18,7 @@ echo '<pre>';
 print_r($_SERVER);
 echo '</pre>';
 
-if ($_SERVER["HTTP_HOST"] == 'www.electricbikehub.co.nz') {
+if ($_SERVER["HTTP_HOST"] == 'electricbikehub.co.nz') {
 	//***doing it this was invalidates the setting in wp-admin menus but allows it to run
 	//on either local or remote without updating the database
 	define('WP_HOME','http://electricbikehub.co.nz');
