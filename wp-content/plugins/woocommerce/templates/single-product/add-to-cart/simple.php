@@ -23,6 +23,7 @@ if ( ! $product->is_purchasable() ) return;
 ?>
 
 <?php if ( $product->is_in_stock() ) : ?>
+
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<form class="cart" method="post" enctype='multipart/form-data'>
