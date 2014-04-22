@@ -5,7 +5,7 @@
 			<h4>Our tagline about bikes</h4>
 		</div>
 		<div class="col-sm-4 text-right">
-			<h2>(03) 545-122</h2>
+			<h2>(03) 545-1122</h2>
 		</div>
 	</div>
 </div>
