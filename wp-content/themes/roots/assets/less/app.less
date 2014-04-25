@@ -77,6 +77,8 @@ body { }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
+.thumbnail.alignleft { margin: 10px 20px 10px 0; }
+.thumbnail.alignright { margin: 10px 0 10px 20px; }
 
 
 /* ==========================================================================
@@ -88,3 +90,26 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 @media (min-width: @screen-md-min) { }
 
 @media (min-width: @screen-lg-min) { }
+
+
+/* ==========================================================================
+   Press page
+   ========================================================================== */
+
+.post-type-archive-press {
+
+   .col-sm-4 {
+      margin-bottom: 20px;
+      .press-title { margin: 5px 0; }
+      .thumbnail {
+         margin-bottom: 10px;
+      }
+      // img { display: block; }
+   }
+
+}
+
+.attachment-press-thumb {
+   max-width: 100%;
+   height: auto;
+}

@@ -1,0 +1,1 @@
+ /Applications/MAMP/Library/bin/mysql --host=localhost -proot -u root username wordpress < db.sql
