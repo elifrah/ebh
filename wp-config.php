@@ -14,27 +14,27 @@
  * @package WordPress
  */
 
-if ($_SERVER["HTTP_HOST"] == 'www.electricbikehub.co.nz') {
+// if ($_SERVER["HTTP_HOST"] == 'www.electricbikehub.co.nz') {
 	//***doing it this was invalidates the setting in wp-admin menus but allows it to run
 	//on either local or remote without updating the database
-	define('WP_HOME','http://www.electricbikehub.co.nz/ebh');
-	define('WP_SITEURL','http://www.electricbikehub.co.nz/ebh');
+	// define('WP_HOME','http://www.electricbikehub.co.nz/ebh');
+	// define('WP_SITEURL','http://www.electricbikehub.co.nz/ebh');
 
 	define('DB_NAME', 'corefit1_ebhnew');
 	define('DB_USER', 'corefit1_ebhnew');
 	define('DB_PASSWORD', 'F!=sFXe=F[}H');
 	//the remote hostname: box377.bluehost.com *not tested*
 	define('DB_HOST', 'localhost');
-}
-else {
-	define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
-	define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
+// }
+// else {
+// 	define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
+// 	define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
 
-	define('DB_NAME', 'wordpress');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'root');
-	define('DB_HOST', 'localhost');
-}
+// 	define('DB_NAME', 'wordpress');
+// 	define('DB_USER', 'root');
+// 	define('DB_PASSWORD', 'root');
+// 	define('DB_HOST', 'localhost');
+// }
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
