@@ -14,7 +14,8 @@
  * @package WordPress
  */
 
-// if ($_SERVER["HTTP_HOST"] == 'www.electricbikehub.co.nz') {
+
+if (strpos($_SERVER["HTTP_HOST"], 'electricbikehub.co.nz') !== false) {
 	//***doing it this was invalidates the setting in wp-admin menus but allows it to run
 	//on either local or remote without updating the database
 	// define('WP_HOME','http://www.electricbikehub.co.nz/ebh');
@@ -25,7 +26,7 @@
 	define('DB_PASSWORD', 'F!=sFXe=F[}H');
 	//the remote hostname: box377.bluehost.com *not tested*
 	define('DB_HOST', 'localhost');
-// }
+}
 // else {
 // 	define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
 // 	define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
