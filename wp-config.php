@@ -27,15 +27,15 @@ if (strpos($_SERVER["HTTP_HOST"], 'electricbikehub.co.nz') !== false) {
 	//the remote hostname: box377.bluehost.com *not tested*
 	define('DB_HOST', 'localhost');
 }
-// else {
-// 	define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
-// 	define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
+else {
+	// define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
+	// define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/ebh');
 
-// 	define('DB_NAME', 'wordpress');
-// 	define('DB_USER', 'root');
-// 	define('DB_PASSWORD', 'root');
-// 	define('DB_HOST', 'localhost');
-// }
+	define('DB_NAME', 'corefit1_ebhnew');
+	define('DB_USER', 'corefit1_ebhnew');
+	define('DB_PASSWORD', 'F!=sFXe=F[}H');
+	define('DB_HOST', '142.4.3.91:3306');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
